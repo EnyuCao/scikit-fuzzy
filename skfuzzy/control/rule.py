@@ -149,7 +149,8 @@ class Rule(object):
         if self._antecedent is None:
             raise ValueError("Antecedent not set")
         return self._antecedent
-
+    # THIS SECTION will be rewritten
+    #'''
     @antecedent.setter
     def antecedent(self, value):
         """
@@ -179,7 +180,9 @@ class Rule(object):
                 _find_terms(obj.term2)
         _find_terms(self.antecedent)
         return terms
-
+    #'''
+    # THIS SECTION will be rewritten
+    #'''
     @property
     def consequent(self):
         """
@@ -223,6 +226,7 @@ class Rule(object):
                     self._consequent.append(i)
                 else:
                     raise ValueError("Unexpected consequent type")
+    #'''
 
     @property
     def graph_n(self):
